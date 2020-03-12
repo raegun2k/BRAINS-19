@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "BRAINS-19",
+    "version": "0.1",
+    "content_scripts": [
+        {
+          "matches": [
+            "<all_urls>"
+          ],
+          "js": ["jquery-3.4.1.slim.min.js","findAndReplaceDOMText.js","braaaaaaains.js"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "noooo_braaaaaaaaains-38.png"
+    },
+    "background": {
+        "scripts": ["bgraaaaaaaaaains.js"]
+    },
+    "permissions": [
+        "storage",
+        "activeTab"
+      ]
+
+   
+}
+
