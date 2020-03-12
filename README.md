@@ -1,8 +1,6 @@
 # BRAINS-19
 
-Authoer
-
-Replace mentions of COVID-19 or Coronavirus on a webpage with "Zombie Apocalypse" or "Zombie Infection" instead.
+Replaces mentions of COVID-19 or Coronavirus on a webpage with "Zombie Apocalypse" or "Zombie Infection" instead.
 
 It's a very simple extension done quickly by someone who never made one. 
 
