@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "BRAINS-19",
     "description": "Replaces mentions of COVID-19 or Coronavirus on a webpage with 'Zombie Apocalypse' or 'Zombie Infection' instead.",
-    "version": "0.1",
+    "version": "0.2",
     "content_scripts": [
         {
           "matches": [
