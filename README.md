@@ -58,6 +58,13 @@ Instructions essentially the same as Chrome, just go to the [...] menu, and clic
  
  This extension WILL overwrite everything, including possible form fields. DISABLE IT IF YOU NEED TO WRITE SOMETHING ABOUT COVID SOMEWHERE OTHERWISE IT MAY OVERWRITE WHAT YOU'RE WRITING. I TAKE NO RESPONSIBILITY FOR RUINED HOMEWORK OR DOCUMENTATION.
 
+# Known issues
+
+ * Tickers or lazy loaded content may not be captured. Working on it.
+ * Sometimes you need to refresh the page after enabling.
+ * It may overwrite form fields.
+ * Google rejected the extension. Resubmitting. For now, continue to side load.
+
 ## Credentials ##
 
 **Developed By**       Rae O'Neil
