@@ -60,9 +60,9 @@ Instructions essentially the same as Chrome, just go to the [...] menu, and clic
 
 # Known issues
 
- * Tickers or lazy loaded content may not be captured. Working on it.
- * Sometimes you need to refresh the page after enabling.
- * It may overwrite form fields.
+ * <del> Tickers or lazy loaded content may not be captured. Working on it.</del>  *fixed in 0.2*
+ * <del> Sometimes you need to refresh the page after enabling.</del>  *fixed in 0.2*
+ * <del> It may overwrite form fields.</del>  *fixed in 0.2*
  * Google rejected the extension. Resubmitting. For now, continue to side load.
 
 ## Credentials ##
