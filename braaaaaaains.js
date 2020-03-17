@@ -43,7 +43,7 @@ function braaainsRedrawPage () {
             findAndReplaceDOMText(this, 
                 { 
                     find: RegExp('(CORVID\-19|CORVID19|COVID\-19|coronavirus|COVID19|(COVID 19))( (disease|infection|plague))?','ig'), 
-                    replace: 'Zombie Apocalypse', 
+                    replace: 'Zombie Infection', 
                     wrap: 'span', 
                     wrapClass: 'braaaaains', 
                     filterElements: function(el) { 
