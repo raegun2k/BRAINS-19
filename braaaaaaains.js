@@ -1,7 +1,7 @@
 
 
-$("<link href='https://fonts.googleapis.com/css?family=Creepster&display=swap' rel='stylesheet'></link>");
-$("<style type='text/css'> .braaaaains { color:#f00; font-weight:bold;font-family: 'Creepster', cursive;} </style>").appendTo("head");
+$("head").append("<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Creepster&display=swap' type='text/css'>");
+$("head").append("<style type='text/css'> .braaaaains { color:#f00; font-family: 'Creepster', cursive; font-style: normal !important; font-weight: 400 !important; text-shadow:-1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF; } </style>");
 
 
 const brains19_etypes = ['p','a','span','h1','h2','h3','h4','h5','h6','h7','title','li','div'];
