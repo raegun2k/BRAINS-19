@@ -1,0 +1,50 @@
+#!/bin/bash
+# creates a firefox release package
+
+export ff_addon_id=$1;
+
+
+if [ -z "$ff_addon_id" ] ; then
+  echo "Must include firefox extension id!" 1>&2
+  echo "Usage: $0 {firefox addon id} {firefox addon version}\n\n" 1>&2
+  exit 1  # fail
+fi
+
+export ff_addon_version=$2;
+
+
+if [ -z "$ff_addon_version" ] ; then
+  echo "Must include firefox extension id!" 1>&2
+  echo "Usage: $0 {firefox addon id} {firefox addon version}\n\n" 1>&2
+  exit 1  # fail
+fi
+
+
+
+script_path="`dirname \"$0\"`"              # relative
+if [ -z "$script_path" ] ; then
+  echo "Error getting script path!" 1>&2
+  exit 1  # fail
+fi
+
+if [[ ! -d "$script_path/../packages/firefox" ]]; then mkdir -p "$script_path/../packages/firefox"; fi;
+
+
+if [[ -f "$script_path/../packages/firefox/BRAINS-19-${ff_addon_version}-Firefox.zip" ]]; then rm "$script_path/../packages/firefox/BRAINS-19-${ff_addon_version}-Firefox.zip"; fi;
+
+cat $script_path/../manifest.json | sed '1 s/^{/{\n    "browser_specific_settings": \{ \n       "gecko": \{ \n          "id": "{{{FFID}}}" \n        }  \n    \},/' | sed "s/{{{FFID}}}/$ff_addon_id/" | sed -e "s/\"version\": \"[0-9.]\+\"/\"version\": \"$ff_addon_version\"/" > "$script_path/../packages/firefox/manifest.json";
+
+zip -j "$script_path/../packages/firefox/BRAINS-19-${ff_addon_version}-Firefox.zip" \
+       "$script_path/../noooo_braaaaaaaaains-19.png" \
+       "$script_path/../noooo_braaaaaaaaains-38.png" \
+       "$script_path/../braaaaaaaaains-19.png" \
+       "$script_path/../braaaaaaaaains-38.png" \
+       "$script_path/../findAndReplaceDOMText.js" \
+       "$script_path/../jquery-3.4.1.slim.min.js" \
+       "$script_path/../bgraaaaaaaaaains.js" \
+       "$script_path/../braaaaaaains.js" \
+       "$script_path/../packages/firefox/manifest.json"
+
+cat "$script_path/../packages/firefox/manifest.json";
+rm "$script_path/../packages/firefox/manifest.json";
+
