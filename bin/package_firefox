@@ -14,7 +14,7 @@ export ff_addon_version=$2;
 
 
 if [ -z "$ff_addon_version" ] ; then
-  echo "Must include firefox extension id!" 1>&2
+  echo "Must include firefox extension version!" 1>&2
   echo "Usage: $0 {firefox addon id} {firefox addon version}\n\n" 1>&2
   exit 1  # fail
 fi

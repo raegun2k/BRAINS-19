@@ -1,0 +1,42 @@
+#!/bin/bash
+# creates a Chrome release package
+
+export ch_addon_version=$1;
+
+
+if [ -z "$ch_addon_version" ] ; then
+  echo "Must include chrome extension version!" 1>&2
+  echo "Usage: $0 {chrome extension version}\n\n" 1>&2
+  exit 1  # fail
+fi
+
+
+
+script_path="`dirname \"$0\"`"              # relative
+if [ -z "$script_path" ] ; then
+  echo "Error getting script path!" 1>&2
+  exit 1  # fail
+fi
+
+if [[ ! -d "$script_path/../packages/chrome" ]]; then mkdir -p "$script_path/../packages/chrome"; fi;
+
+
+if [[ -f "$script_path/../packages/chrome/BRAINS-19-${ch_addon_version}-Chrome.zip" ]]; then rm "$script_path/../packages/chrome/BRAINS-19-${ch_addon_version}-Chrome.zip"; fi;
+
+cat $script_path/../manifest.json | sed -e "s/\"version\": \"[0-9.]\+\"/\"version\": \"$ch_addon_version\"/" > "$script_path/../packages/chrome/manifest.json";
+
+zip -j "$script_path/../packages/chrome/BRAINS-19-${ch_addon_version}-Chrome.zip" \
+       "$script_path/../noooo_braaaaaaaaains-19.png" \
+       "$script_path/../noooo_braaaaaaaaains-38.png" \
+       "$script_path/../braaaaaaaaains-19.png" \
+       "$script_path/../braaaaaaaaains-38.png" \
+       "$script_path/../findAndReplaceDOMText.js" \
+       "$script_path/../jquery-3.4.1.slim.min.js" \
+       "$script_path/../bgraaaaaaaaaains.js" \
+       "$script_path/../braaaaaaains.js" \
+       "$script_path/../manifest.json"
+
+cat  "$script_path/../packages/chrome/manifest.json";
+rm  "$script_path/../packages/chrome/manifest.json"
+
+
