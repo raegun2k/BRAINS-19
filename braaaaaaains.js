@@ -39,18 +39,29 @@ function braaainsRedrawPage () {
                      if(el.nodeName){ return !el.nodeName.match(/input|textarea/i) } return true 
                 }
             }
-        ) && ( 
-            findAndReplaceDOMText(this, 
-                { 
-                    find: RegExp('(CORVID\-19|CORVID19|COVID\-19|coronavirus|COVID19|(COVID 19))( (disease|infection|plague))?','ig'), 
-                    replace: 'Zombie Infection', 
-                    wrap: 'span', 
-                    wrapClass: 'braaaaains', 
-                    filterElements: function(el) { 
-                        if(el.nodeName){ return !el.nodeName.match(/input|textarea/i) } return true 
-                    }
+        );  
+        findAndReplaceDOMText(this, 
+            { 
+                find: RegExp('(CORVID\-19|CORVID19|COVID\-19|coronavirus|COVID19|(COVID 19))( (disease|infection|plague))?','ig'), 
+                replace: 'Zombie Infection', 
+                wrap: 'span', 
+                wrapClass: 'braaaaains', 
+                filterElements: function(el) { 
+                    if(el.nodeName){ return !el.nodeName.match(/input|textarea/i) } return true 
                 }
-            ))
+            }
+        );
+        findAndReplaceDOMText(this, 
+            { 
+                find: RegExp('(Chinese|China|Wuhan)+ (virus|infection|disease|epidemic|pandemic|plague)+','ig'),
+                replace: 'what racists call the Zombie Infection', 
+                wrap: 'span', 
+                wrapClass: 'braaaaains', 
+                filterElements: function(el) { 
+                    if(el.nodeName){ return !el.nodeName.match(/input|textarea/i) } return true 
+                }
+            }
+        )
     })})
 }
 
