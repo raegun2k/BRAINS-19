@@ -9,7 +9,7 @@ I do not collect any information via this extension. It should only be affecting
 
 Your privacy is important and this is just a silly extension. I have no intention of collecting data from you.
 
-The extension will slurp the content of all visit webpages in order to affectuate the intended manipulations, but none of this will be transferred away.
+The extension will slurp the content of all visited webpages in order to affectuate the intended manipulations, but none of this will be transferred away.
 
 The extension will also acquire a Google hosted webfont. In doing so, Google's servers will be made aware of your IP. No other information will be transferred to them from this extension aside from which font to load.
 
