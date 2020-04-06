@@ -7,7 +7,7 @@ It's a very simple extension done quickly by someone who never made one.
 Suggested by one Sarah Sawler on Twitter(https://twitter.com/SarahSawler/status/1238092065864585217) to lighten
 the thick atmosphere with a bit of dark zombie humour.
 
-THis has been submitted to the Chrome Web Store for review, but in the mean time, you can install this in your browser via sideload.
+This has been submitted to the Chrome Web Store for review, but in the meantime, you can install this in your browser via sideload.
  
 ## Installation: 
 
@@ -71,7 +71,7 @@ Instructions essentially the same as Chrome, just go to the [...] menu, and clic
 
 **Website:**           https://github.com/raegun2k, https://gammarae.design
 
-**Stable tag:**        1.0.0  
+**Stable tag:**        0.3  
 
 **License:**           MIT License 
 
