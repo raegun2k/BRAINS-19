@@ -1,3 +1,5 @@
+Probably obvious but this project is (un)dead. 
+
 # BRAINS-19
 
 Replaces mentions of COVID-19 or Coronavirus on a webpage with "Zombie Apocalypse" or "Zombie Infection" instead.
